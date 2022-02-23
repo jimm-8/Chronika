@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Retrieval Practice</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Play'>
+  <link rel="stylesheet" href="css/flashstyle.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="flashcard-app" class="container">
+
+    <h1>Study with Flashcards!</h1>
+
+    <div class="flashcard-form">
+      <label for="front">Front
+        <input v-model="newFront" type="text" id="front">
+      </label>
+      <label for="back">Back
+        <input v-on:keypress.enter="addNew" v-model="newBack" type="text" id="back">
+      </label>
+      <button v-on:click="addNew">Add a New Card</button>
+      <span v-show="error" class="error">Oops! Flashcards need a front and a back.</span>
+    </div>
+
+    <ul class="flashcard-list">
+      <li v-on:click="toggleCard(card)" v-for="(card, index) in cards">
+        <transition name="flip">
+          <p v-bind:key="card.flipped" class="card">
+              {{ card.flipped ? card.back : card.front }}
+              <span v-on:click="cards.splice(index, 1)" class="delete-card">X</span>
+          </p>
+        </transition>
+      </li>
+    </ul>
+
+    <a href="study time.html" class="btn btn-primary">Go Back</a>
+  </div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js'></script><script  src="js/script1.js"></script>
+
+</body>
+</html>

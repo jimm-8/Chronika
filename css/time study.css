@@ -1,0 +1,169 @@
+/* ====== Start if Cards ===== */
+.header__right p {
+    margin-top: 1rem;
+}
+
+.studytime__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 2em;
+}
+
+.studytime__card {
+    background: #6c63ff;
+    padding: 1.6rem;
+    border-radius: 1rem;
+    text-align: center;
+    transition: all 400ms ease;
+}
+
+.studytime__card:hover {
+    background: #424890;
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+}
+
+.studytime__icon {
+    background: #f75842;
+    padding: 0.6rem;
+    border-radius: 1rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.studytime__card:nth-child(2) .studytime__icon {
+    background: #00bf8e;
+}
+
+.studytime__card p {
+    margin-top: 1rem;
+}
+/* ====== End of Card ===== */
+
+/* ====== Study time ===== */
+.chooses {
+    margin-top: 2rem;
+    background: #2e3267;
+}
+
+.chooses h2 {
+    margin-top: 5rem;
+}
+
+.chooses-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.choose {
+    background: #424890;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: all 400ms ease;
+}
+
+.choose:hover {
+    background: transparent;
+    border-color: #6c63ff;
+}
+
+.choose__info {
+    padding: 2rem;
+}
+
+.choose__info p {
+    margin: 1.2rem 0 2rem;
+    font-size: 0.9rem;
+}
+/* ====== End of Study time ===== */
+
+/* MEDIA QUERIES (MOBILE PHONES) */
+@media screen and (max-width: 600px) {
+    .container {
+        width: var(94%);
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+    }
+
+    /* NAVBAR FOR MOBILE PHONES */
+    .nav__menu {
+        right: 3%;
+    }
+
+    /* HEADER FOR MOBILE PHONES */
+    header {
+        height: 100vh;
+    }
+
+    .header__container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin-top: -2rem;
+    }
+
+    .header__right {
+        margin-top: 1rem;
+    }
+
+    .studytime__cards {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+
+    .studytime__card {
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+
+    .studytime__icon {
+        margin-top: 3px;
+        display: inline-block;
+    }
+
+    .studytime__card p {
+        margin-top: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .studytime__card h3 {
+        margin-top: 0rem;
+        font-size: 1.1rem;
+    }
+
+    .chooses-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* FOOTER */
+    .footer__container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .footer__1 p {
+        margin: 1rem auto;
+    }
+
+    .footer__socials {
+        justify-content: center;
+    }
+}

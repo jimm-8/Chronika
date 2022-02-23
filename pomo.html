@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Pomodoro Timer</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Play'><link rel="stylesheet" href="css/pomostyle.css">
+
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+  <div class="header">
+    <h1>Pomodoro Timer</h1>
+  </div>
+  
+  <div class="row">
+    <div class="col-half knob-wrapper">
+      <h5>Session Length</h5>
+      <input type="text" value="25" size="5" id="session-knob" />
+    </div>
+    <div class="col-half knob-wrapper">
+      <h5>Break Length</h5>
+      <input type="text" value="5" size="5" id="break-knob" />
+    </div>
+  </div>
+  
+  <div class="buttons">
+    <a id="cmd-reset" class="btn btn-red"><i class="fa fa-undo"></i> Reset</a>
+    <a id="cmd-pause" class="btn btn-yellow hidden"><i class="fa fa-pause"></i> Pause</a>
+    <a id="cmd-go" class="btn btn-green"><i class="fa fa-play"></i> Start</a>
+  </div>
+  
+  <div class="buttons-mute">
+    <a id="cmd-mute" class="btn btn-mute"><i class="fa fa-volume-up"></i></a>
+    <a id="cmd-unmute" class="btn btn-mute hidden"><i class="fa fa-volume-off"></i></a>
+  </div>
+  
+  <div class="timer knob-wrapper">
+    <input type="text" value="1500" size="5" id="timer-display" />
+  </div> 
+  <div class="heading">
+    <img class="heading__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/756881/laptop.svg">
+    <h1 class="heading__title">To-Do List</h1>
+  </div>
+  <form class="form">
+    <div>
+      <label class="form__label" for="todo">~ Today I need to ~</label>
+      <input class="form__input"
+           type="text" 
+           id="todo" 
+           name="to-do"
+           size="30"
+           required>
+      <button class="button"><span>Submit</span></button>
+    </div>
+  </form>
+  <div>
+    <ul class="toDoList">
+    </ul>
+  </div>
+  <a href="study time.html" class="btn btn-primary">Go Back</a>
+</div>
+<!-- partial -->
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jQuery-Knob/1.2.13/jquery.knob.min.js'></script><script  src="js/script.js"></script>
+
+</body>
+</html>
